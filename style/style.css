@@ -14,7 +14,8 @@
     --noto_medium: 'NotoSans-Medium';
     --noto_regular: 'NotoSans-Regular';
     --noto_semiBold: 'NotoSans-SemiBold';
-    --light_mode: #FFFFFF;
+    --light_mode: white;
+    --dark_mode: #0C0C0C;
     --primary_color: #313131;
 }
 
@@ -38,9 +39,10 @@
     margin-right: 124px;
 }
 
-.header_navbar-link,  .header_navbar-link:hover {
+.header_navbar-link, .header_navbar-link:hover {
     display: inline-block;
-    color: var(--light_mode);
+    color: white;
+    background: var(--primary_color);
     text-transform: capitalize;
     font-size: 14px;
     line-height: 70px;
@@ -121,9 +123,11 @@
     color: var(--light_mode);
 }
 
+
 .header_navbar-search {
     font-family: var(--noto_light);
     color: #BBBBBB;
+    
     font-size: 14px;
     line-height: 19px;
     justify-content: space-around;
@@ -229,15 +233,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 /* HEADER END */
 
 
@@ -246,6 +241,10 @@
 
 /* MAIN START */
 
+
+.main__menu-logo::before {
+     content: url('../images/logo_ps5_img.png');
+}
 .main__work {
     margin-top: 50px;
 }
@@ -800,8 +799,9 @@
     margin-top: 50px;
 }
 
-.footer__nav-link {
+.footer__nav-link, .footer__nav-link:hover {
     color: #FFFFFF;
+    background: var(--primary_color);
     line-height: 25px;
     font-size: 18px;
 }
@@ -900,12 +900,49 @@
 
 /* THIRD PAGE start*/
 
-.header__content-left-img {
-    gap: 30px;
+.main__left-content {
+    margin-top: 70px;
 }
 
-.header__left-img {
-    width: 80px;
-    margin-top: 30px;
+.tab__content-img {
+    min-width: 409px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+
+.main__left-list li:nth-of-type(1) .nav___link {
+    content: url(../images/phone_img1.png);
+    max-width: 120px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.main__left-list li:nth-of-type(2) .nav___link {
+    content: url(../images/phone_img2.png);
+    max-width: 120px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
+.main__left-list li:nth-of-type(3) .nav___link {
+    content: url(../images/phone_img3.png);
+    max-width: 120px;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.main__left-list, li .nav___link.active  {
+    opacity: 1;
+}
+
+
 /* THIRD PAGE END */
